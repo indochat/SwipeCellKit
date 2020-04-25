@@ -83,9 +83,7 @@ public class SwipeAction: NSObject {
     ///
     /// - note: When set to `true`, the actions menu is automatically hidden when the action is selected. The default value is `false`.
     public var hidesWhenSelected = false
-    
-    public var alwaysHideAfterTouchEnd = false
-    
+        
     /**
      Constructs a new `SwipeAction` instance.
 

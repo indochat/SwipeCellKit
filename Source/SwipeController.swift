@@ -155,7 +155,11 @@ class SwipeController: NSObject {
             
             if actionsView.expanded == true, let expandedAction = actionsView.expandableAction  {
                 perform(action: expandedAction)
-            } else {
+            }
+            else if actionsView.expandableAction?.identifier == "alwaysHideAfterTouchEnd" {
+                hideSwipe(animated: true)
+            }
+            else {
                 let targetOffset = targetCenter(active: swipeable.state.isActive)
                 let distance = targetOffset - actionsContainerView.center.x
                 let normalizedVelocity = velocity.x * scrollRatio / distance
